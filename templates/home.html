@@ -1,0 +1,29 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página Inicial</title>
+</head>
+<body>
+    <h1>Bem-vindo à Página Inicial</h1>
+    
+    <button id="loginButton" method="POST">Login</button>
+
+    <!-- Botão para Cadastro -->
+    <button id="cadastroButton" method="POST">Cadastro</button>
+
+    <script>
+        // Redireciona para a página de login quando o botão "Login" é clicado
+        document.getElementById("loginButton").onclick = function() {
+            window.location.href = "/login";
+        };
+
+        // Redireciona para a página de cadastro quando o botão "Cadastro" é clicado
+        document.getElementById("cadastroButton").onclick = function() {
+            window.location.href = "/register";
+        };
+    </script>
+
+    
+</body>
+</html>
