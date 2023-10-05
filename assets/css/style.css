@@ -1,0 +1,39 @@
+*{
+    background: white;
+    color: purple;    
+}
+
+.container{
+    align-items: center;
+    display: flex;
+    padding: 0;
+    margin: 0;
+    color: lightgray;
+}
+
+.container div {
+    padding-left: 3rem;
+}
+
+.searchForm {
+    padding: 0;
+    margin: 0;
+    min-width: auto;
+}
+
+.searchForm div{
+    padding: 0.2rem;
+    margin: 0;
+    background: lightgray;
+}
+
+.searchForm input {
+    min-width: 65%;
+    border: none;
+}
+
+.searchForm button {
+    border: none;
+    background-color: blueviolet;
+    color: white;
+}
