@@ -2,16 +2,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css')}}">
     <title>Página Inicial</title>
 </head>
 <body>
     <h1>Bem-vindo à Página Inicial</h1>
-    
-    <button id="loginButton" method="POST">Login</button>
-
-    <!-- Botão para Cadastro -->
-    <button id="cadastroButton" method="POST">Cadastro</button>
-
+    <div class="home-div">
+        <button id="loginButton" method="POST">Login</button>
+        <button id="cadastroButton" method="POST">Cadastro</button>
+    </div>
     <script>
         // Redireciona para a página de login quando o botão "Login" é clicado
         document.getElementById("loginButton").onclick = function() {
