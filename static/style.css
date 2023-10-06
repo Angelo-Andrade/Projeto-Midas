@@ -77,13 +77,13 @@ button:hover{
     cursor: pointer;
 }
 
-.login-form-div {
+.login-form-div, .cadastro-form-div {
     width: 100%;
     margin: auto;
     display: flex;
 }
 
-.login-form-div button {
+.login-form-div button, .cadastro-form-div button{
     width: fit-content;
     margin-right: 20px;
 }
