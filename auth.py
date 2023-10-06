@@ -12,6 +12,8 @@ class Usuario(db.Model):
     username = db.Column(db.String(80), unique=True, nullable=False)
     password = db.Column(db.String(120), nullable=False)
 
+def is_authenticated():
+    return 'user_id' in session
 
 @app.route('/')
 def main():
@@ -28,6 +30,7 @@ def login():
 
         if usuario and check_password_hash(usuario.password, password):
             session['user_id'] = usuario.id
+            session['user_name'] = usuario.username
             return redirect(url_for('dashboard'))
         
     return render_template('login.html')
@@ -61,7 +64,20 @@ def register():
 
 @app.route('/dashboard', methods=['POST', 'GET'])
 def dashboard():
-    return render_template('dashboard.html')
+    if 'user_id' in session:
+        user_name = session.get('user_name', 'Guest')
+        return render_template('dashboard.html', user_name=user_name)
+    else:
+        return redirect(url_for('login'))
+
+@app.route('/notauth')
+def notauth():
+    return render_template('notauth.html')
+
+@app.route('/logout')
+def logout():
+    session.pop('user_id', None)
+    return 'Logout bem-sucedido!'   
 
 if __name__ == '__main__':
     with app.app_context():

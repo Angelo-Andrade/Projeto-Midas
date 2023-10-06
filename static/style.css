@@ -67,9 +67,11 @@ button{
 }
 
 button:hover{
-    background-color: #a56edc;
+    background-color: #a57edc;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
 }
 
+<<<<<<< HEAD
 .header-logo {
     border-bottom: 3px solid darkslategray;
     background-color: #4b1c71;
@@ -97,3 +99,5 @@ button:hover{
     width: 100%;
 }
 
+=======
+>>>>>>> main
