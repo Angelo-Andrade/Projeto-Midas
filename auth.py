@@ -2,7 +2,7 @@ from flask import Flask, render_template, request, jsonify, redirect, url_for, s
 from flask_sqlalchemy import SQLAlchemy
 from werkzeug.security import generate_password_hash, check_password_hash
 
-app = Flask(__name__)
+app = Flask(__name__, static_folder='static')
 app.secret_key = '1234'  # Defina uma chave secreta para a sessão
 app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///usuarios.db'
 db = SQLAlchemy(app)

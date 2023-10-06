@@ -1,6 +1,5 @@
 *{
-    background: white;
-    color: purple;    
+    color:#ffffff;
 }
 
 .container{
@@ -37,3 +36,7 @@
     background-color: blueviolet;
     color: white;
 }
+
+body{
+    background: linear-gradient(to bottom, #4b1c71, #7f4ca5);
+  }
