@@ -1,42 +1,57 @@
 *{
-    color:#ffffff;
-}
-
-.container{
-    align-items: center;
-    display: flex;
-    padding: 0;
-    margin: 0;
-    color: lightgray;
-}
-
-.container div {
-    padding-left: 3rem;
-}
-
-.searchForm {
-    padding: 0;
-    margin: 0;
-    min-width: auto;
-}
-
-.searchForm div{
-    padding: 0.2rem;
-    margin: 0;
-    background: lightgray;
-}
-
-.searchForm input {
-    min-width: 65%;
-    border: none;
-}
-
-.searchForm button {
-    border: none;
-    background-color: blueviolet;
-    color: white;
+    color:#fff0ff;
 }
 
 body{
     background: linear-gradient(to bottom, #4b1c71, #7f4ca5);
-  }
+}
+
+h1{
+    font-family: 'Roboto', sans-serif;
+    font-size: 50px;
+    font-weight: 900;
+    text-align: center;
+    margin-top: 100px;
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+}
+
+#registration-form{
+    margin-top: 50px;
+    margin-bottom: 50px;
+    margin-left: 400px;
+    margin-right: 400px;
+    padding: 50px;
+    border-radius: 10px;
+    background-color: rgba(0, 0, 0, 0.5);
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+}
+
+#username, #password, #confirm-password{
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+    background-color: #dbb6ee;
+    margin-bottom: 20px;
+    font-family: 'Roboto', sans-serif;
+    font-size: 20px;
+    font-weight: 900;
+
+}
+
+button{
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+    background-color: #b57edc;
+    margin-bottom: 20px;
+    font-family: 'Roboto', sans-serif;
+    font-size: 20px;
+    font-weight: 900;
+    cursor: pointer;
+}
+
+button:hover{
+    background-color: #a56edc;
+}
