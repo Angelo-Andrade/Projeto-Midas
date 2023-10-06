@@ -7,8 +7,11 @@
 </head>
 <body>
     <div class="container">
-        <header class="header-logo" id="home-button">
-            <img src="" alt="logo-buttom_home">
+        <header class="header-logo">
+            <img src="" alt="logo-buttom_home" id="homeButton">
+            <p>|</p>
+            <h2 id="loginButton">Login</h2>
+            <p>|</p>
         </header>
         <h1>Cadastro</h1>
         <form id="registration-form" method="POST">
@@ -23,18 +26,17 @@
             <br>
             <div class="cadastro-form-div">
                 <button type="submit">Cadastrar</button>
-                <button type="submit" id="loginButton">Login</button>
             </div>
         </form>
         <p id="message"></p>
     </div>
     <script >
-        document.getElementById("loginButton").onclick = function() {
-            window.location.href = "/login";
+        document.getElementById("homeButton").onclick = function() {
+            window.location.href = "/";
         };
 
-        document.getElementById("home-button").onclick = function() {
-            window.location.href = "/";
+        document.getElementById("loginButton").onclick = function() {
+            window.location.href = "/login";
         };
     </script>
 
