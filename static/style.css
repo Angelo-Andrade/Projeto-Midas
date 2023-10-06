@@ -25,16 +25,16 @@ h1{
     text-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
 }
 
-#registration-form{
-    margin-top: 50px;
-    margin-bottom: 50px;
-    margin-left: 400px;
-    margin-right: 400px;
+#registration-form, #login-form{
+    margin: auto;
+    max-width: 40%;
+    min-inline-size: 350px;
     padding: 50px;
     border-radius: 10px;
     background-color: rgba(0, 0, 0, 0.5);
     box-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
 }
+
 
 input{
     width: 100%;
@@ -69,5 +69,32 @@ button{
 button:hover{
     background-color: #a57edc;
     box-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+}
+
+.header-logo {
+    border-bottom: 3px solid darkslategray;
+    background-color: #4b1c71;
+    cursor: pointer;
+}
+
+.login-form-div {
+    width: 100%;
+    margin: auto;
+    display: flex;
+}
+
+.login-form-div button {
+    width: fit-content;
+    margin-right: 20px;
+}
+
+.home-div {
+    width: fit-content;
+    margin: auto;
+    margin-top: 3rem;
+}
+
+.home-button button{
+    width: 100%;
 }
 
