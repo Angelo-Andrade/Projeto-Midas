@@ -2,28 +2,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css')}}">
     <title>Dashboard</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #f0f0f0;
-        }
-
-        .dashboard-container {
-            max-width: 800px;
-            margin: 0 auto;
-            padding: 20px;
-            background-color: #ffffff;
-            border-radius: 5px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-            text-align: center;
-        }
-    </style>
 </head>
 <body>
+    <header>
+        <div>
+            <p class="dashboard-user">Usuário</p>
+        </div>
+        <div>
+            <p class="dashboard-logout" id="dashboard-logout-button">Logout</p>
+        </div>
+    </header>
     <div class="dashboard-container">
         <h1>LOGIN CONCLUÍDO</h1>
-        <p>Seja bem-vindo ao painel, {{ user_name }}!</p>
     </div>
 </body>
 </html>
