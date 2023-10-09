@@ -42,7 +42,7 @@ def register():
         existing_user = Usuario.query.filter_by(username=username).first()
 
         if existing_user:
-            return jsonify({'message': 'Usuário já existe!'})
+            return jsonify({'message': 'Usuario ja existe!'})
         
         if password != confirm_password:
             return jsonify({'message': 'Senhas não coincidem!'})
