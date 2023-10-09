@@ -1,0 +1,109 @@
+*{
+    color:#fff0ff;
+    font-size: 20px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 900;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    outline: none;
+    border: none;
+    transition: all 0.3s ease;
+}
+
+body{
+    background: linear-gradient(to bottom, #4b1c71, #7f4ca5);
+}
+
+h1{
+    font-family: 'Roboto', sans-serif;
+    font-size: 50px;
+    font-weight: 900;
+    text-align: center;
+    margin-top: 100px;
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+}
+
+#registration-form, #login-form{
+    margin: auto;
+    max-width: 40%;
+    min-inline-size: 350px;
+    padding: 50px;
+    border-radius: 10px;
+    background-color: rgba(0, 0, 0, 0.5);
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+}
+
+
+input{
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+    background-color: #dbb6ee;
+    margin-bottom: 20px;
+    font-family: 'Roboto', sans-serif;
+    font-size: 20px;
+    font-weight: 900;
+}
+
+input:focus{
+    background-color: #cbb6ee;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+}
+
+button{
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+    background-color: #b57edc;
+    margin-bottom: 20px;
+    font-family: 'Roboto', sans-serif;
+    font-size: 20px;
+    font-weight: 900;
+    cursor: pointer;
+}
+
+button:hover{
+    background-color: #a57edc;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+}
+
+.header-logo {
+    border-bottom: 3px solid darkslategray;
+    background-color: #4b1c71;
+    display: flex;
+}
+
+.header-logo #homeButton, .header-logo #cadastroButton, .header-logo #loginButton {
+    cursor: pointer;
+}
+
+.header-logo p {
+    margin-inline: 1rem;
+    color: darkslategray;
+}
+
+.login-form-div, .cadastro-form-div {
+    width: 100%;
+    margin: auto;
+    display: flex;
+}
+
+.login-form-div button, .cadastro-form-div button{
+    width: 100%;
+    margin: auto;
+}
+
+.home-div {
+    width: fit-content;
+    margin: auto;
+    margin-top: 3rem;
+}
+
+.homeButton button{
+    width: 100%;
+}
+
