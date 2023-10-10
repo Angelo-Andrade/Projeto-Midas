@@ -8,7 +8,7 @@
 <body>
     <header>
         <div>
-            <p class="dashboard-user">Usuário</p>
+            <p class="dashboard-user">{{ user_name }}</p>
         </div>
         <div>
             <p class="dashboard-logout" id="dashboard-logout-button">Logout</p>
@@ -17,5 +17,23 @@
     <div class="dashboard-container">
         <h1>LOGIN CONCLUÍDO</h1>
     </div>
+    <form method="post">
+        <label for="task">Informe algo:</label>
+        <input type="text" id="task" name="task" required>
+        <button type="submit">Salvar</button>
+    </form>
+    {% if task_data %}
+    <h2>Lista de Tarefas:</h2>
+    <ul>
+        {% for task in task_data %}
+        <li>{{ task.task }}</li>
+        {% endfor %}
+    </ul>
+    {% endif %}
+    <script>
+        document.getElementById("dashboard-logout-button").onclick = function() {
+            window.location.href = "/logout";
+        };
+    </script>
 </body>
 </html>
