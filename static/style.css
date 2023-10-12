@@ -107,4 +107,58 @@ button:hover{
     width: 100%;
 }
 
+.dashboard-container {
+    display: flex;
+}
+
+.dashboard-container h2{
+    width: 100%;
+}
+
+.dashboard-todo-div {
+    width: fit-content;
+    margin: 0.5rem;
+    margin-left: 1rem;  
+    display: flex;
+    flex-direction: row;
+    border: 5px solid darkslategray;
+    border-radius: 15px;
+    padding: 1rem;
+    padding-bottom: 0.3rem;
+    height: auto;
+}
+
+h3 {
+    font-size: 30px;
+    margin-left: 5rem;
+}
+
+.dashboard-container h4 {
+    font-size: 20px;
+}
+
+.dashboard-container h5 {
+    font-size: 15px;
+    margin-left: 10px;
+}
+
+.dashboard-todo-form{
+    margin-top: 1rem;
+    margin-right: 0.1rem;
+    display: inline-block;
+    min-width: 220px;
+}
+
+.dashboard-todo-input {
+    font-size: 10px;
+    width: fit-content;
+    margin: auto;
+    min-width: 180px;
+}
+
+.dashboard-todo-button {
+    font-size: 10px;
+    width: fit-content;
+}
+
 
