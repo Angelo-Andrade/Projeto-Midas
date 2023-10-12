@@ -145,7 +145,8 @@ h3 {
 .dashboard-todo-form{
     margin-top: 1rem;
     margin-right: 0.1rem;
-    display: inline-block;    
+    display: inline-block;
+    min-width: 220px;
 }
 
 .dashboard-todo-input {
