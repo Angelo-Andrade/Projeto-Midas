@@ -15,41 +15,24 @@
         <p>|</p>
     </header>
     <h3>Suas Tarefas:</h3>
-    <div class="dashboard-container">
-        <div class="dashboard-todo-div", id="todo-list">
-            <div>
-                <h4>Lorem, ipsum</h4>
-                <h5>Lorem, ipsum</h5>
-                <form action="" class="dashboard-todo-form">
-                    <input type="text" class="dashboard-todo-input" placeholder="Digite aqui o nome da tarefa:">
-                    <button class="dashboard-todo-button">+</button>
+    <div class="boxes">
+        {% for box in boxes %}
+            <div class="box">
+                <h3>{{ box.name }}</h3>
+                <form method="POST">
+                    <input class="dashboard-todo-form"type="text" name="task" placeholder="Adicionar tarefa" class="dashboard-todo-input">
+                    <input type="hidden" name="box" value="{{ box.id }}">
+                    <button type="submit" class="dashboard-todo-button">Adicionar Tarefa</button>
                 </form>
+                <ul>
+                    {% for task in box.tasks %}
+                        <li>{{ task.task }}</li>
+                    {% endfor %}
+                </ul>
             </div>
-        </div>
-        <div class="dashboard-todo-div", id="todo-list">
-            <div>
-                <h4>Lorem, ipsum</h4>
-                <h5>Lorem, ipsum</h5>
-                <form action="" class="dashboard-todo-form">
-                    <input type="text" class="dashboard-todo-input" placeholder="Digite aqui o nome da tarefa:">
-                    <button class="dashboard-todo-button">+</button>
-                </form>
-            </div>
-        </div>
-    </div>
-    <form method="post">
-        <label for="task">Informe algo:</label>
-        <input type="text" id="task" name="task" required>
-        <button type="submit">Salvar</button>
-    </form>
-    {% if task_data %}
-    <h2>Lista de Tarefas:</h2>
-    <ul>
-        {% for task in task_data %}
-        <li>{{ task.task }}</li>
         {% endfor %}
-    </ul>
-    {% endif %}
+    </div>
+    
     <script>
         document.getElementById("dashboard-logout-button").onclick = function() {
             window.location.href = "/logout";
