@@ -9,28 +9,33 @@
     <header class="header-logo">
         <img src="" alt="logo-buttom_home" id="homeButton">
         <p>|</p>
-        <h2 class="dashboard-user">Usuário</h2>
+        <h2 class="dashboard-user">{{user_name}}</h2>
         <p>|</p>
         <h2 class="dashboard-logout" id="dashboard-logout-button">Logout</h2>
         <p>|</p>
     </header>
     <h3>Suas Tarefas:</h3>
     <div class="boxes">
+        <form method="POST" action="/addbox">
+            <input class="add-box" type="text" name="box_name" placeholder="Nome da box">
+            <button class="add-box" type="submit" form="addbox">Adicionar Box</button>
+        </form>
         {% for box in boxes %}
             <div class="box">
                 <h3>{{ box.name }}</h3>
                 <form method="POST">
-                    <input class="dashboard-todo-form"type="text" name="task" placeholder="Adicionar tarefa" class="dashboard-todo-input">
+                    <input class="dashboard-todo-form" type="text" name="task_{{ box.id }}" placeholder="Adicionar tarefa" class="dashboard-todo-input">
                     <input type="hidden" name="box" value="{{ box.id }}">
                     <button type="submit" class="dashboard-todo-button">Adicionar Tarefa</button>
                 </form>
                 <ul>
-                    {% for task in box.tasks %}
+                    {% for task in task_data[box.id] %}
                         <li>{{ task.task }}</li>
                     {% endfor %}
                 </ul>
             </div>
         {% endfor %}
+
     </div>
     
     <script>
